@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client-build" : "cd firstproject && npm ci && npm run build && cd ../",
+    "client-build" : "cd FirstProject && npm ci && npm run build && cd ../",
     "server-build" : "cd server && npm ci && cd ../",
-    "heroku-prebuild" : "npm run client-build && npm run server-build && move ./firstproject/build ./server",
+    "heroku-prebuild" : "npm run client-build && npm run server-build && mv ./FirstProject/build ./server",
     "start": "cd server && npm start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
