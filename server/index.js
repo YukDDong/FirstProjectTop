@@ -7,6 +7,7 @@ const config=require('./config/key')
 const cookieParser=require('cookie-parser')
 const { auth }=require('./middleware/auth')
 
+app.use(express.static('build'))
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(cookieParser())
@@ -20,15 +21,15 @@ mongoose.set('strictQuery', false);
 mongoose.connect(config.mongoURI,{}).then(()=>console.log('MongoDB Connected...'))
 .catch(err=>console.log(err))
 
-
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/build/index.html')
+})
 
 app.get('/api/hello', (req, res)=>{
   res.send('안녕하세요')
 })
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+
 
 app.post('/api/user/register', (req, res)=>{
   //회원가입시 필요한 정보들을 client에서 가져오면
