@@ -8,25 +8,9 @@ import MyTodoList from "./routes/MyTodoList";
 import Calendar from "./routes/Calendar";
 import LoginPage from "./routes/LoginPage";
 import RegisterPage from "./routes/RegisterPage";
-import axios from "axios";
-import { useHistory } from "react-router-dom";
 import auth from "./hoc/auth";
 
 function App() {
-  const history = useHistory();
-
-  const onClickHandler = (e) => {
-    e.preventDefault();
-    axios.get("/api/user/logout").then((response) => {
-      if (response.data.success) {
-        alert("로그아웃되었습니다.");
-        history.push("/login");
-      } else {
-        alert("로그아웃 하는데 실패했습니다.");
-      }
-    });
-  };
-
   return (
     <div id="wrap">
       <Header />
