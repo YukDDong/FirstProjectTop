@@ -1,8 +1,7 @@
-import { Route, Link } from "react-router-dom";
-import Nav from "react-bootstrap/Nav";
+import { Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import "./Header.scss";
+import Header from "./Header";
 import Home from "./routes/Home";
 import Movie from "./routes/Movie";
 import MyTodoList from "./routes/MyTodoList";
@@ -30,39 +29,7 @@ function App() {
 
   return (
     <div id="wrap">
-      <div id="header">
-        <div id="header_in">
-          <div id="logo">
-            <Link to="/">FirstProject</Link>
-          </div>
-          <Nav variant="pills" defaultActiveKey="/">
-            <Nav.Item>
-              <Nav.Link as={Link} to="/Movie">
-                Movie
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link as={Link} to="/MyTodoList">
-                MyTodoList
-              </Nav.Link>
-            </Nav.Item>
-            <Nav.Item>
-              <Nav.Link as={Link} to="/Calendar">
-                Calendar
-              </Nav.Link>
-            </Nav.Item>
-          </Nav>
-          <ul className="login_box">
-            <li>
-              <Link to="/login">LOGIN</Link>
-            </li>
-            <li>
-              <Link to="/register">JOIN</Link>
-            </li>
-          </ul>
-          <button onClick={onClickHandler}>로그아웃</button>
-        </div>
-      </div>
+      <Header />
       <div id="contents">
         <Route path="/" exact={true} component={auth(Home, null)}></Route>
         <Route path="/Movie" component={auth(Movie, true)}></Route>
