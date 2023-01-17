@@ -3,13 +3,12 @@ import Nav from "react-bootstrap/Nav";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "./Header.scss";
-import Home from "./Home/Home";
-import Movie from "./components/Movie";
-import MyTodoList from "./components/MyTodoList";
-import Calendar from "./components/Calendar";
-import MyInfo from "./components/MyInfo";
-import LoginPage from "./components/views/LoginPage/LoginPage";
-import RegisterPage from "./components/views/RegisterPage/RegisterPage";
+import Home from "./routes/Home";
+import Movie from "./routes/Movie";
+import MyTodoList from "./routes/MyTodoList";
+import Calendar from "./routes/Calendar";
+import LoginPage from "./routes/LoginPage";
+import RegisterPage from "./routes/RegisterPage";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import auth from "./hoc/auth";
@@ -52,11 +51,6 @@ function App() {
                 Calendar
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link as={Link} to="/MyInfo">
-                MyInfo
-              </Nav.Link>
-            </Nav.Item>
           </Nav>
           <ul className="login_box">
             <li>
@@ -74,7 +68,6 @@ function App() {
         <Route path="/Movie" component={auth(Movie, true)}></Route>
         <Route path="/MyTodoList" component={auth(MyTodoList, true)}></Route>
         <Route path="/Calendar" component={auth(Calendar, true)}></Route>
-        <Route path="/MyInfo" component={auth(MyInfo, true)}></Route>
         <Route path="/login" component={auth(LoginPage, false)}></Route>
         <Route path="/register" component={auth(RegisterPage, false)}></Route>
       </div>
