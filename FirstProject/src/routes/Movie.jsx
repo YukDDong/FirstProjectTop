@@ -9,7 +9,7 @@ function Movie() {
         <Route path="/hello">
           <h1>Hello</h1>
         </Route>
-        <Route path="/movies">
+        <Route path="/movie/:id">
           <Detail />
         </Route>
         <Route path="/">

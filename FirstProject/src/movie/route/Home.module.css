@@ -1,0 +1,19 @@
+.wrap {
+}
+
+.wrap__loading {
+  text-align: center;
+  line-height: 80vh;
+  font-size: 70px;
+}
+
+.wrap__moviebox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 100px;
+}
+
+.moviewrap__moviebox__right Link {
+  text-decoration: none;
+}

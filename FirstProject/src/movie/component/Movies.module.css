@@ -1,0 +1,70 @@
+.moviebox {
+  width: 40vw;
+  height: 35vh;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  position: relative;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.moviebox__imgbox {
+  width: 30%;
+}
+
+.moviebox__imgbox:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+
+.moviebox__imgbox__img {
+  width: 100%;
+  height: 100%;
+}
+
+.moviebox__imgbox__img:hover + .moviebox__imgbox__rating {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.moviebox__imgbox__rating:hover {
+  opacity: 1;
+}
+
+.moviebox__imgbox__rating {
+  opacity: 0;
+  font-size: 30px;
+  font-weight: 600;
+  position: absolute;
+  color: yellow;
+  top: 45%;
+  left: 7%;
+}
+
+.moviebox__textbox {
+  width: 60%;
+}
+
+.moviebox__textbox h2 {
+  color: #000;
+}
+.moviebox__textbox ul {
+  width: 90%;
+  list-style: none;
+  position: relative;
+  left: -50px;
+  top: 20px;
+  display: flex;
+}
+
+.moviebox__textbox li {
+  padding: 10px;
+  list-style: none;
+  margin-right: 10px;
+  display: block;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
+  background-color: coral;
+}
