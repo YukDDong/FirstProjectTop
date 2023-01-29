@@ -11,7 +11,7 @@ const TodoItem = ({
   const { id, text, checked } = todo;
   return (
     <div className="TodoItem">
-      <div className={`content ${checked ? "checked" : ""}`}>
+      <div className={`todo_content ${checked ? "checked" : ""}`}>
         {checked ? (
           <MdCheckBox
             onClick={() => {

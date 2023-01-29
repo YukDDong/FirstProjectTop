@@ -1,0 +1,8 @@
+.home-h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  line-height: 100px;
+  text-align: center;
+  margin-top: 200px;
+}

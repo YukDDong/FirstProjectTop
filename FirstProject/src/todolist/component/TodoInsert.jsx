@@ -33,6 +33,7 @@ const TodoInsert = ({
     <div>
       <div className="background" onClick={onInsertToggle}></div>
       <form
+        className="todo_insert_form"
         onSubmit={
           selectedTodo
             ? () => {
@@ -42,7 +43,8 @@ const TodoInsert = ({
         }
       >
         <input
-          placeholder="please type"
+          className="todo_insert_input"
+          placeholder="할 일을 입력해주세요!"
           value={value}
           onChange={onChange}
         ></input>
@@ -60,7 +62,7 @@ const TodoInsert = ({
             />
           </div>
         ) : (
-          <button type="submit">
+          <button className="todo_insert_btn" type="submit">
             <MdAddCircle />
           </button>
         )}

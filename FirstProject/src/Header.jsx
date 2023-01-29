@@ -34,7 +34,7 @@ function Header() {
           </Nav.Item>
           <Nav.Item>
             <Nav.Link as={Link} to="/MyTodoList">
-              MyTodoList
+              TodoList
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
